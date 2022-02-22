@@ -1,0 +1,36 @@
+<nav id="mainNav" class="navbar-light navbar-expand-lg navbar" [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
+  <div class="container-lg" id="nav-container" [ngClass]="{'sticky-nav' : isSticky, 'nav': !isSticky}">
+    <div class="container-lg d-flex justify-content-lg-between justify-content-md-center justify-content-sm-center justify-content-center bg-mobile">
+        <a class="navbar-brand js-scroll-trigger" href="#">
+            <app-logo></app-logo>
+        </a>
+      <div class="menu-main-menu-container" [ngClass]="{'active': activeToggle, '': !activeToggle}">
+        <ul id="menu-main-menu" class="menu" [ngClass]="{'sHovered': isHovering, '': !isHovering}">
+          <li *ngFor="let itemMenuu of itemsMenuu" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+              <a (mouseover)="isHovering=true" (mouseout)="isHovering=false" [ngClass]="{'hovering': isHovering, '': !isHovering}">{{itemMenuu.item}}
+                <i id="arrow" class="fa fa-angle-right"></i>
+             </a>
+            <ul class="sub-menu" [ngClass]="{'sHovered': isHoveringSub, '': !isHoveringSub}">
+              <li *ngFor="let subItem of itemMenuu.subItems" class="menu-item menu-item-type-post_type menu-item-object-page">
+                  <a href="#" (mouseover)="isHoveringSub=true" (mouseout)="isHoveringSub=false" [ngClass]="{'hovering': isHoveringSub, '': !isHoveringSub}">{{subItem.item}}</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <button class="navbar-toggler navbar-toggler-right" (click)="toggleMenu()" [ngClass]="{'active': activeToggle, '': !activeToggle}">
+        <span class="navbar-toggler-ic">
+            <app-icon-menu></app-icon-menu>
+      </span>
+      </button>
+      <div class="collapse navbar-collapse text-right justify-content-end" id="navbarResponsive" style="display:none !important" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+          <li class="nav-item item-cart"><a><img class="cart" src="@/assets/cart.svg" alt="up" width="20px" />
+            <p>0</p>
+          </a></li>
+          <li class="nav-item item-user"><a><img class="hambur" src="@/assets/hambur.png" alt="up" width="15px" /><img class="user" src="@/assets/user.svg" alt="up" width="25px" /></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

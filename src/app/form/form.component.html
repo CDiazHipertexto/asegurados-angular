@@ -1,0 +1,77 @@
+<form>
+    <div class="container-fluid p-0 h-100 container">
+        <div class="row">
+            <div class="pr col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12">
+                <div class="body--wrap validate-input">
+                    <ng-select [items]="typeAuto"
+                               bindLabel="name"
+                               autofocus
+                               bindValue="id">
+
+                    </ng-select>
+                    <span class="focus-input2" data-placeholder="Marca del auto:"></span>
+                </div>
+                <div class="ui-message-error" v-if="!mobileValid">
+                    <p v-html="'¡Seleccione Marca del auto!'"></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="pr col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12">
+                <div class="body--wrap validate-input">
+                    <ng-select [items]="modelAuto"
+                               bindLabel="name"
+                               autofocus
+                               bindValue="id">
+
+                    </ng-select>
+                    <span class="focus-input2" data-placeholder="Modelo del auto:"></span>
+                </div>
+                <div class="ui-message-error" v-if="!mobileValid">
+                    <p v-html="'¡Ingresa Modelo del auto!'"></p>
+                </div>
+            </div>
+            <div class="pr col-sm-12 col-md-6 col-lg-6 col-xl-6 col-12">
+                <div class="body--wrap validate-input">
+                    <ng-select [items]="yearAuto"
+                               bindLabel="name"
+                               autofocus
+                               bindValue="id">
+
+                    </ng-select>
+                    <span class="focus-input2" data-placeholder="Año:"></span>
+                </div>
+                <div class="ui-message-error" v-if="!mobileValid">
+                    <p v-html="'¡Seleccione año!'"></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="pr col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12">
+                <div class="body--wrap validate-input">
+                    <input class="landing-cpa--input" type="email" autocomplete="off" />
+                    <span class="focus-input2" data-placeholder="Email:"></span>
+                </div>
+                <div class="ui-message-error" v-if="!mobileValid">
+                    <p v-html="'¡Ingresa Email!'"></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="pr col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12">
+                <div class="body--wrap validate-input">
+                    <input class="landing-cpa--input" type="number" autocomplete="off" />
+                    <span class="focus-input2" data-placeholder="Teléfono celular:"></span>
+                </div>
+                <div class="ui-message-error" v-if="!mobileValid">
+                    <p v-html="'¡Ingresa Teléfono celular!'"></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="pr col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 text-center">
+                <a href="" class="btn btn--green btn-primary">Cotizar ahora</a>
+            </div>
+        </div>
+    </div>
+</form>

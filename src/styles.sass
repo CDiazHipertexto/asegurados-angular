@@ -1,0 +1,338 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@ng-select/ng-select/themes/default.theme.css"
+//variables
+// Override the Bootstrap defaults without modifying key, versioned files.
+$font-family-sans-serif: 'Open Sans', sans-serif
+
+// Corporate global Fonts - Asegyrados
+$font-family-sans-serif-plp: 'Open Sans', sans-serif
+
+// Corporate global colors - Asegyrados
+$blueLightHex: #36AADD
+$blueLightRgb: rgb(54, 170, 210)
+
+$greenLightHex: #BBD550
+$greenLightRgb: rgb(187, 213, 80)
+
+$OrangeHex: #f4832a
+$OrangeRgb: rgb(242, 97, 34)
+
+$greenDarkHex: #1C2030
+$greenDarkRgb: rgb(28, 32, 48)
+
+$pinkDarkHex: #FF1786
+$pinkDarkRgb: rgb(255, 23, 134)
+
+$blackHex: #0000
+$blackRgb: rgb(0, 0, 0)
+
+$whiteHex: #ffffff
+$whiteRgb: rgb(255, 255, 255)
+$color-text: #333333
+
+
+$success: #19b0d5
+$info: #17a2b8
+$warning: #f30f50
+$danger: #dc3545
+$light: #f8f9fa
+$dark: #343a40
+
+// Font Sizes
+$s-size: 1.2rem
+$m-size: 1.6rem // default 16px font size base
+$l-size: 3.2rem
+$xl-size: 4.8rem
+
+
+
+
+//resets
+*
+  margin: 0
+  padding: 0
+  box-sizing: inherit
+  &::after, &::before
+    margin: 0
+    padding: 0
+    box-sizing: inherit
+html
+  box-sizing: border-box
+  font-size: 62.5%
+
+
+body
+  box-sizing: border-box !important
+  font-family: $font-family-sans-serif-plp !important
+  font-size: $m-size !important
+  line-height: 1.6
+
+a
+  text-decoration: none !important
+
+#mainNav *
+  transition: all .6s ease
+
+p
+  margin: 0
+  //@media all and (max-width: 1280x)
+  .pry
+    padding-top: 0 !important
+
+.bg-dark
+  background-color: $greenDarkHex !important
+
+
+//buttom
+.button
+
+  position: relative
+  border-radius: 3px
+  margin: 0
+  padding: 1rem 3rem !important
+  box-shadow: 0 2px 6px rgba(0,0,0,.2)
+  font-size: 1.5rem !important
+  line-height: 1.1rem
+  text-transform: uppercase
+  color: #fff
+  background: transparent
+  border: 1px solid transparent
+  transition: all .2s ease
+  text-align: center
+  display: inline-block
+  font-weight: 500 !important
+  height: 4.5rem
+  .large
+    padding: 20px 56px
+
+.btn
+  &--orange
+    background-color: $OrangeHex !important
+    color: $whiteHex !important
+
+  &__link
+    border: 0
+    background: transparent
+    box-shadow: none
+input:focus
+  outline: none
+
+
+  //personal
+.py__section
+  padding-bottom: 10rem
+  padding-top: 10rem
+
+
+.sticky
+  transition: .7s
+  padding: 0
+  p
+    color: blue
+  #logoAsegurados
+    width: 15em !important
+    .st1, .st2
+      transition: 1s
+      fill: #676767 !important
+    .st6
+      transition: 1s
+      fill: #4D4D4D !important
+    #background
+      transition: 1s
+      opacity: 0
+  #menu
+    .st1, .st2
+      fill: #4d4d4d !important
+
+  .active
+    #menu
+      .st1
+        opacity: 1
+        transform: rotate(42deg) translate(1px, -15px)
+        &:nth-last-child(2)
+          transform: rotate(-42deg) translate(0px, 10px) !important
+        &:nth-last-child(3)
+          opacity: 0
+          transform: rotate(0deg) scale(0.2, 0.2)
+.box-swiper
+  @media all and (max-width: 991px)
+    display: flex
+    align-content: center
+    align-items: center
+.line
+  background: #E6E6E6
+  max-width: 43vh
+  width: 100%
+  min-height: 100%
+  color: #999999
+  display: flex
+  align-items: center
+  justify-content: space-between
+  border-radius: 0
+  padding: .5em
+  font-size: 14px
+  line-height: 1
+  pointer-events: visible
+  position: absolute
+  right: 0
+  top: 0
+  z-index: 1
+  @media all and (max-width: 991px)
+    min-height: auto
+    margin-top: 1em
+    border-radius: 0
+    height: fit-content
+    width: 100%
+    border-top: 3px solid $blueLightHex
+    max-width: 352px
+    right: 2em
+    top: auto
+  @media all and (max-width: 767px)
+    position: absolute
+    bottom: -284px
+    left: 0
+    right: 0
+    margin: auto
+    max-width: 90%
+  .wrapper-post
+    display: flex
+    text-align: left
+    align-content: center
+    align-items: center
+    margin-bottom: .8em
+    font-size: .81em
+    img.avatar
+      margin-right: .5em
+  .bg-dark
+    background-color: $greenDarkHex !important
+    border-radius: 10px
+    border: 1px solid rgba(255, 255, 255, 0.32)
+    .extra
+      color: #00FFA2
+    p
+      margin: 0
+    .text-shop
+      font-size: .5em
+    .txt-price
+      font-size: 1em
+    .txt-und
+      font-size: .4em
+    .dtc
+      font-size: 1.5em
+    .text-left
+      text-align: left
+    .line-secon
+      border: 1px solid #ffffff61
+      border-radius: 5px
+      display: flex
+      padding: 0.61em .3em
+      margin-top: 0.51em
+      align-items: center
+      justify-content: space-between
+      .price
+        display: flex
+        flex-direction: row
+        align-content: center
+        justify-content: space-between
+        align-items: center
+#sectionBanner
+  position: relative
+  .vueperslides__track
+    height: 100% !important
+    transform: none !important
+  .vueperslide__content-wrapper
+    z-index: 2
+  .vueperslides__track-inner > .vueperslide
+    &:after
+      content: ""
+      display: block
+      width: 100%
+      height: 100%
+      position: absolute
+      bottom: 0
+      background: rgb(28 32 48 / 37%)
+      z-index: 0
+  .vueperslides__track:before
+    content: ""
+    display: block
+    width: 30px
+    height: 30px
+    position: absolute
+    background-position: center
+    background-repeat: no-repeat
+    bottom: 3em
+    left: 0
+    right: 0
+    z-index: 9
+    margin: auto
+.vueperslides
+  &__fractions
+    background: #fff
+    color: #000
+    border-radius: 0
+    padding: 1px 10px
+    font-size: .91em
+  &__arrows
+    position: absolute
+    bottom: 0
+    left: 0
+    @media all and (max-width: 767px)
+      display: none
+  &__arrow
+    position: relative
+    background: #EAEAEA
+    border-radius: 50px
+    top: 0
+    bottom: 0
+    color: #848484 !important
+    &--prev
+      left: 1.5em
+    &--next
+      right: -2em
+    svg
+      width: 3.5rem !important
+      stroke-width: 2px !important
+      padding: 10px 14px !important
+  &__bullet
+        .default
+          background-color: rgba(255, 255, 255, 0.3)
+          border: none
+          box-shadow: none
+          transition: 0.3s
+          width: 1rem
+          height: 1rem
+          span
+            display: block
+            color: #fff
+            font-size: 10px
+            opacity: 0.8
+  &__bullet--active
+        .default
+          background-color: $blueLightHex
+  &--fixed-height
+    min-height: 640px
+    height: 640px
+    z-index: 2
+    @media all and (max-width: 991px)
+      min-height: 705px
+      height: 705px
+    @media all and (max-width: 737px)
+      min-height: 32vh
+      height: 32vh
+    .vueperslides__inner
+      min-height: inherit !important
+  &__arrow
+    color: #fff
+    svg
+      stroke-width: 1
+      width: 4.5rem
+
+.ng-select .ng-select-container
+  width: 100%
+  min-height: 40px
+  border-radius: 0
+  border: 1px solid #e8e8e8
+  background: #fff
+  font-size: 14px
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap'
